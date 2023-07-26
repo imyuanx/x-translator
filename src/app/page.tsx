@@ -50,15 +50,19 @@ export default function Home() {
   }
 
   return (
-    <main className="flex justify-center p-10">
-      <div className="max-w-[600px] w-full flex flex-col items-center gap-12">
+    <main className="flex flex-col items-center p-10 pb-3 min-h-screen">
+      <div className="max-w-[600px] w-full flex flex-1 flex-col items-center gap-12">
         <div className="flex flex-col w-full items-center gap-3">
           <h1 className="text-4xl font-black">{translate("X Translator")}</h1>
           <h3>
             {translate("Translate ")}
-            <span className="border-black border-b-2 border-double">{translate("Twitter")}</span>
+            <span className="border-black border-b-2 border-double">
+              {translate("Twitter")}
+            </span>
             {translate(" to ")}
-            <span className="border-black border-b-2 border-double">{translate("X")}</span>
+            <span className="border-black border-b-2 border-double">
+              {translate("X")}
+            </span>
           </h3>
         </div>
         <div className="w-full flex flex-col items-center gap-4">
@@ -70,8 +74,27 @@ export default function Home() {
             <ArrowDownUp className="mr-2 h-4 w-4" />
             {translate("Translate")}
           </Button>
-          <Textarea value={XText} className="w-full min-h-[200px]" readOnly />
+          <Textarea value={XText} className="x-font w-full min-h-[200px]" readOnly />
         </div>
+      </div>
+      <div className="w-full flex gap-3">
+        <a className="underline" href="http://yuanx.me" target="_blank">
+          @yuanx
+        </a>
+        <a
+          className="underline"
+          href="https://twitter.com/imyuanx"
+          target="_blank"
+        >
+          twitter
+        </a>
+        <a
+          className="underline"
+          href="https://github.com/imyuanx/x-translator"
+          target="_blank"
+        >
+          github
+        </a>
       </div>
     </main>
   );
